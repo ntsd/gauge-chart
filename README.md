@@ -49,6 +49,8 @@ let gaugeOptions = {
   arcDelimiters: [30],
   rangeLabel: ['0', '100'],
   centralLabel: '50',
+  labelsColor: 'black',
+  arcPaddingColor: 'white',
 }
 
 // Drawing and updating the chart
@@ -81,6 +83,8 @@ Feel free to change or delete any of the gaugeOptions properties as long as thei
 | rangeLabel        | array of two strings                                                             | depicts gauge ranges on both sides of the chart      |
 | centralLabel      | string                                                                           | depicts gauge inner label                            |
 | labelsFont        | string                                                                           | specifies font-family to be used for labels          |
+| labelsColor       | string                                                                           | Change range label color and central label color     |
+| arcLabelColor     | string                                                                           | Change arc label color                               |
 
 #### .gaugeChart( ... )
 
