@@ -21,7 +21,8 @@ let gaugeOptions = {
   centralLabel: '175',
   rangeLabelFontSize: false,
   labelsFont: 'Consolas',
-  labelsColor: 'black'
+  centralLabelColor: 'red',
+  rangeLabelColors: ['blue', 'green']
 }
 
 GaugeChart.gaugeChart(element, 400, gaugeOptions).updateNeedle(50)
