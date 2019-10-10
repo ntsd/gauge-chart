@@ -314,7 +314,8 @@ export function labelOutline(
   centralLabel: string,
   rangeLabelFontSize: number,
   labelsFont: string,
-  labelsColor: string,
+  centralLabelColor: string,
+  rangeLabelColors: string[],
 ) {
   let arcWidth = chartHeight - outerRadius
 
@@ -349,7 +350,7 @@ export function labelOutline(
     .text(rangeLabel ? rangeLabel[0] : '')
     .attr('font-size', rangeLabelFontSize + 'px')
     .attr('font-family', labelsFont)
-    .attr('fill', labelsColor)
+    .attr('fill', rangeLabelColors[0])
 
   svg
     .append('text')
@@ -358,7 +359,7 @@ export function labelOutline(
     .text(rangeLabel ? rangeLabel[1] : '')
     .attr('font-size', rangeLabelFontSize + 'px')
     .attr('font-family', labelsFont)
-    .attr('fill', labelsColor)
+    .attr('fill', rangeLabelColors[1])
 
   svg
     .append('text')
@@ -367,7 +368,7 @@ export function labelOutline(
     .text(centralLabel)
     .attr('font-size', centralLabelFontSize + 'px')
     .attr('font-family', labelsFont)
-    .attr('fill', labelsColor)
+    .attr('fill', centralLabelColor)
 }
 
 export interface GaugeOptions {
@@ -408,7 +409,8 @@ export function gaugeChart(
     centralLabel: '',
     rangeLabelFontSize: undefined,
     labelsFont: 'Roboto,Helvetica Neue,sans-serif',
-    labelsColor: 'black',
+    centralLabelColor: 'black',
+    rangeLabelColors: ['black', 'black'],
   }
 
   let {
@@ -429,7 +431,8 @@ export function gaugeChart(
     labelsFont,
     outerNeedle,
     needleStartValue,
-    labelsColor,
+    centralLabelColor,
+    rangeLabelColors,
   } = (Object as any).assign(defaultGaugeOption, gaugeOptions)
   if (!paramChecker(arcDelimiters, arcColors, rangeLabel)) {
     return
@@ -494,7 +497,8 @@ export function gaugeChart(
     centralLabel,
     rangeLabelFontSize,
     labelsFont,
-    labelsColor,
+    centralLabelColor,
+    rangeLabelColors,
   )
 
   return new Gauge(svg, needleUpdateSpeed, needle)

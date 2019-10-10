@@ -415,6 +415,7 @@ describe('label outlining', () => {
       rangeLabelFontSize,
       'sans-serif',
       'black',
+      ['black', 'black'],
     )
     expect(svg).not.toBe(null)
     expect(svg.html().match(/text/g).length / 2).toBe(3)
@@ -440,6 +441,7 @@ describe('label outlining', () => {
       rangeLabelFontSize,
       'sans-serif',
       'black',
+      ['black', 'black'],
     )
 
     let svgHtml = svg.html().split('</text>')
@@ -477,6 +479,7 @@ describe('label outlining', () => {
       rangeLabelFontSize,
       'sans-serif',
       'black',
+      ['black', 'black'],
     )
 
     let svgHtml = svg.html().split('</text>')
@@ -516,6 +519,7 @@ describe('label outlining', () => {
       rangeLabelFontSize,
       'sans-serif',
       'black',
+      ['black', 'black'],
     )
 
     let svgHtml = svg.html().split('</text>')
