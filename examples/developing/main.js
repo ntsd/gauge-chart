@@ -14,12 +14,14 @@ let gaugeOptions = {
   arcPaddingColor: 'white',
   arcLabels: ['35', '210', '315'],
   arcLabelFontSize: false,
+  arcLabelColor: 'black',
   //arcOverEffect: false,
   // label options
   rangeLabel: ['0', '350'],
   centralLabel: '175',
   rangeLabelFontSize: false,
   labelsFont: 'Consolas',
+  labelsColor: 'black'
 }
 
 GaugeChart.gaugeChart(element, 400, gaugeOptions).updateNeedle(50)

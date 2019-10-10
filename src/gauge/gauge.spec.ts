@@ -89,6 +89,7 @@ describe('arc outlining', () => {
       undefined,
       undefined,
       undefined,
+      'black',
       'sans-serif',
     )
     expect(svg).not.toBe(null)
@@ -115,6 +116,7 @@ describe('arc outlining', () => {
       undefined,
       undefined,
       undefined,
+      'black',
       'sans-serif',
     )
     // define the whole path string (M...A...L...A...Z for svg arc)
@@ -148,6 +150,7 @@ describe('arc outlining', () => {
       undefined,
       [],
       undefined,
+      'black',
       'sans-serif',
     )
     // number of paths in svg html has to be 4 (2 arcs and 2 arc shadows onmouseover)
@@ -411,6 +414,7 @@ describe('label outlining', () => {
       centralLabel,
       rangeLabelFontSize,
       'sans-serif',
+      'black',
     )
     expect(svg).not.toBe(null)
     expect(svg.html().match(/text/g).length / 2).toBe(3)
@@ -435,6 +439,7 @@ describe('label outlining', () => {
       centralLabel,
       rangeLabelFontSize,
       'sans-serif',
+      'black',
     )
 
     let svgHtml = svg.html().split('</text>')
@@ -471,6 +476,7 @@ describe('label outlining', () => {
       centralLabel,
       rangeLabelFontSize,
       'sans-serif',
+      'black',
     )
 
     let svgHtml = svg.html().split('</text>')
@@ -509,6 +515,7 @@ describe('label outlining', () => {
       centralLabel,
       rangeLabelFontSize,
       'sans-serif',
+      'black',
     )
 
     let svgHtml = svg.html().split('</text>')
